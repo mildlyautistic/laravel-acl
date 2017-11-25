@@ -27,7 +27,7 @@ BAsic underlying philosophy is following
 ### Database schema
 ![alt Laravel ACL Schema](https://cloud.githubusercontent.com/assets/5002331/4994391/dbe4772e-69b8-11e4-9562-514bccc90f22.png "Laravel ACL Schema")
 
-##Installation##
+## Installation
 * **Add this package as required in composer:**
 ```
 "signes/acl": "^2.0.0"
@@ -261,7 +261,7 @@ and here is code how to reach this:
     \Acl::grantGroupRole($role2, $group);
 ```
 
-##User object##
+## User object
 Most important object in ACL is User representation, which is provided by `\App\Models\Acl\User` object.
 For more information's you can check `app/Models/Acl/User.php` file.
 
@@ -279,6 +279,6 @@ You can design your own providers, remember only to implement required interface
 
 `\Signes\Acl` used own Provider to get data. You can check code in `Signes/Acl/Repository/SignesAclRepository.php` file. 
 
-##Credits##
+## Credits
 * Pawel Grzesiecki - Developer ([http://signes.pl/](http://signes.pl/))
 [MIT](http://opensource.org/licenses/MIT) License
