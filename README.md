@@ -82,7 +82,7 @@ If we requested few actions, we get `true` result only when User has access to e
 
 You can pass `$user` to every `\Acl::isAllowed()` method, or set User only once in Acl using `\Acl::setUser(UserInterface $user)`. If you won't set any user, by default it will take **Guest account**, that means: `User::find(1);`.
 
-####Special filters####
+#### Special filters
 
 Roles may contain special filters like:
 * `A` - allow access to everything
@@ -91,7 +91,7 @@ Roles may contain special filters like:
 
 and you can set it using `$role->setFilter($filter)`.
 
-####Available methods####
+#### Available methods
 
 **Note** All interfaces (like `UserInterface`), comes from package so please complete namespaces. I skip full namespace description to make code more readable.
 
