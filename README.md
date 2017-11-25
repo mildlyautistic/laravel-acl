@@ -1,27 +1,11 @@
-#Laravel 5 ACL#
-
-[![Latest Stable Version](https://poser.pugx.org/signes/acl/v/stable)](https://packagist.org/packages/signes/acl)
-[![Build Status](https://travis-ci.org/signes-pl/laravel-acl.svg?branch=master)](https://travis-ci.org/signes-pl/laravel-acl)
-[![Circle CI](https://circleci.com/gh/signes-pl/laravel-acl.svg?style=svg)](https://circleci.com/gh/signes-pl/laravel-acl)
-[![Total Downloads](https://poser.pugx.org/signes/acl/downloads)](https://packagist.org/packages/signes/acl)
-[![License](https://poser.pugx.org/signes/acl/license)](https://packagist.org/packages/signes/acl)
-
-###For Laravel 4, please use the [laravel4](https://github.com/signes-pl/laravel-acl/tree/laravel4) branch. Please note that this version (Laravel 4) is no longer maintained.###
-
-* [Database schema](#database-schema)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Advanced example](#advanced-example)
-* [User object](#user-object)
-* [Create own providers](#create-own-providers)
-* [Credits](#credits)
+# Laravel 5 ACL
 
 
-
-With this package, you will be able detailed control access to any resource on your Laravel site.
+This ACL PAckage allows detailed control access to any resource on Laravel app.
 This mechanism is inspired by the amazing [OrmAuth](http://fuelphp.com/docs/packages/auth/ormauth/intro.html#/acl) solution used in the framework FuelPHP.
 
-You gain powerful mechanism for managing access levels, which include:
+BAsic underlying philosophy is following
+
 * Every User may have one Group,
 * Every User may have many Roles,
 * Every User may have many Permissions,
@@ -30,6 +14,7 @@ You gain powerful mechanism for managing access levels, which include:
 * Every Role may have many Permissions
 * Every Role may have special permission filter, which grant global access to everything, deny access to everything or deny to previous granted access,
 * Every permission may consists of `zone`, `permission` and many `actions`
+(zone is also known as resource)
 
 **Required:**
 * Laravel ~5.1
@@ -39,7 +24,7 @@ You gain powerful mechanism for managing access levels, which include:
 * Using database compatible with [Eloquent](http://laravel.com/docs/5.0/eloquent) and [Migration](http://laravel.com/docs/5.0/migrations) mechanism.
 
 
-###Database schema###
+### Database schema
 ![alt Laravel ACL Schema](https://cloud.githubusercontent.com/assets/5002331/4994391/dbe4772e-69b8-11e4-9562-514bccc90f22.png "Laravel ACL Schema")
 
 ##Installation##
@@ -78,7 +63,7 @@ this command will copy files:
 php artisan migrate
 ```
 
-###Application name###
+### Application name
 In Laravel 5 you can set your [own application name](http://laravel.com/docs/5.0/configuration#after-installation). If you did this and default `namespace` is not "**App**", you have to change namespaces in new models manually. Remember also to update `$namespace` variable in this models to get correct relations.
 
 Also you have to get ACL know which namespace you use. You can do this by `\Acl::setSiteNamespace('MyNamespace');`.
@@ -184,7 +169,7 @@ Disconnect User with Group and revoke all permissions connected with this Group.
     
 ---
 
-## Middleware##
+## Middleware
 
 If you want to use middleware you can register it in `app/Http/Kernel.php`.
 
