@@ -199,7 +199,7 @@ Let's take a sample user **user1**, which belongs to group **myGroup**. **User**
 
 **We want to create connections like below:**
 
-![alt Laravel ACL example](https://cloud.githubusercontent.com/assets/5002331/5563580/6af8b668-8e81-11e4-8f21-7a7ab8be0dfd.jpg "Laravel ACL example")
+![alt Laravel ACL example](https://s3.eu-central-1.amazonaws.com/propal-static/_do_not_delete_this/example_acl.jpg "Laravel ACL example")
 
 in this example **user1** have access to permissions like:
 * `zone1.access1|act1.act2.act3`
